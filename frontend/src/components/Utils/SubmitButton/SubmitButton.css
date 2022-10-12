@@ -1,0 +1,38 @@
+.frame-3,
+.frame-3 * {
+    box-sizing: border-box;
+}
+
+.button {
+    background: linear-gradient(92.1deg, rgba(222, 61, 109, 1.00) 0%, rgba(245, 132, 76, 1.00) 100%);
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 320px;
+    height: 48px;
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    border: none;
+    font: bolder 14px 'Inter';
+    cursor: pointer;
+}
+
+.button-text {
+    color: #ffffff;
+    text-align: left;
+    font: 600 12px 'Inter';
+    position: relative;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    form .button {
+        width: 100%;
+    }
+}

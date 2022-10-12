@@ -1,0 +1,140 @@
+.ellipse-25 {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    position: relative;
+}
+
+.user-name {
+    color: #012a4a;
+    text-align: center;
+    position: relative;
+    /* min-width: 11rem; */
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    align-content: stretch;
+}
+
+.user-thumb {
+    border-radius: 50%;
+    position: absolute;
+    margin-right: 10rem;
+}
+
+.user-thumb img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-link {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #012A4A;
+}
+
+.navlink-active {
+    color: #DE3D6D;
+    font-weight: 700;
+}
+
+.nav-right-items {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.mr-6 {
+    margin-right: 6rem;
+}
+
+.navbar {
+    box-shadow: 0px 4px 15px 0px rgb(0 0 0 /5%)
+}
+
+.settings-options {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    /* padding: 0px; */
+    gap: 18px;
+}
+
+.settings-options img {
+    width: 24px;
+    height: 24px;
+}
+
+.settings-options span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #21334F;
+}
+
+.navbar-brand img {
+    width: 120px;
+}
+
+.dropdown-menu {
+    margin-top: 1rem !important;
+}
+
+#dropdown-button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #012A4A;
+    text-decoration: none;
+}
+
+.navbar-nav button {
+    border-radius: 6px;
+}
+
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .navbar-brand img {
+        width: 269px;
+    }
+
+}
+
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .margin-user {
+        right: 0px;
+        position: absolute;
+    }
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

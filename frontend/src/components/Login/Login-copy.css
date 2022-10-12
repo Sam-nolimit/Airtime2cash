@@ -1,0 +1,270 @@
+.login,
+.login * {
+        box-sizing: border-box;
+}
+
+.login {
+        background: #f5f5f5;
+        /* width: 1440px;*/
+        height: 1500px;
+
+}
+
+.login-card {
+        display: flex;
+        flex-direction: column;
+        /* gap: 20px; */
+        align-items: center;
+        justify-content: flex-start;
+        /* position: absolute; */
+        left: 347px;
+        top: 184px;
+}
+
+.login-card-padding {
+        background: #ffffff;
+        padding: 80px 80px 80px 80px;
+        display: flex;
+        /* flex-direction: column; */
+        /* gap: 40px; */
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 745px;
+        position: absolute;
+        top: 200px;
+
+
+}
+
+.login-box {
+        flex-shrink: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: relative;
+}
+
+.frame-8589 {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.larkef-x-rareblocks-_-logo--31-1 {
+        flex-shrink: 0;
+        position: relative;
+        overflow: visible;
+}
+
+.airtime2cash {
+        text-align: left;
+        font: 600 16px 'Inter';
+        position: relative;
+}
+
+.airtime2cash-span {
+        color: #de3d6d;
+        font: 600 16px 'Inter';
+}
+
+.airtime2cash-span2 {
+        color: #f5844c;
+        font: 600 16px 'Inter';
+}
+
+.frame-8558 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.login2 {
+        color: #21334f;
+        text-align: left;
+        font: 700 18px 'Inter';
+        position: relative;
+}
+
+.frame-10 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.frame-9 {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.frame-8 {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.frame-8748 {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.frame-6 {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.frame-4 {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.email {
+        color: #21334f;
+        text-align: left;
+        font: 400 12px 'Inter';
+        position: relative;
+}
+
+.frame-2 {
+        background: #ffffff;
+        border: solid #d9d9d9;
+        border-width: 1px;
+        padding: 8px 16px 8px 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        width: 320px;
+        height: 48px;
+        position: relative;
+}
+
+.enter-your-email {
+        color: #c4c4c4;
+        text-align: left;
+        font: 400 12px 'Inter';
+        position: relative;
+}
+
+.frame-5 {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        position: relative;
+}
+
+.password {
+        color: #21334f;
+        text-align: left;
+        font: 400 12px 'Inter';
+        position: relative;
+}
+
+.frame-3 {
+        background: #ffffff;
+        border: solid #d9d9d9;
+        border-width: 1px;
+        padding: 8px 16px 8px 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        width: 320px;
+        height: 48px;
+        position: relative;
+}
+
+.enter-your-password {
+        color: #c4c4c4;
+        text-align: left;
+        font: 400 12px 'Inter';
+        position: relative;
+}
+
+.forgot-password- {
+        color: #4285f4;
+        text-align: left;
+        font: 400 12px 'Inter';
+        position: relative;
+}
+
+.frame-32 {
+        background: linear-gradient(92.1deg, rgba(222, 61, 109, 1.00) 0%, rgba(245, 132, 76, 1.00) 100%);
+        padding: 8px 16px 8px 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 320px;
+        height: 48px;
+        position: relative;
+}
+
+.login3 {
+        color: #ffffff;
+        text-align: left;
+        font: 600 12px 'Inter';
+        position: relative;
+}
+
+.don-t-have-an-account--create-account {
+        text-align: left;
+        font: 400 12px 'undefined';
+        position: relative;
+}
+
+.don-t-have-an-account--create-account-span {
+        color: #21334f;
+        font: 400 12px 'Inter';
+}
+
+.don-t-have-an-account--create-account-span2 {
+        color: #de3d6d;
+        font: 700 12px 'Inter';
+}
