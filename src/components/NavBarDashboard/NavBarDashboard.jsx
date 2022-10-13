@@ -24,6 +24,7 @@ export const NavBarDashboard = ({
 }) => {
   const navigate = useNavigate();
 
+  const account = (localStorage.getItem("role") === "user") ? "dashboard" : "admin-dashboard"
   const handeClick = () => {
     navigate("/update");
   };
@@ -67,7 +68,7 @@ export const NavBarDashboard = ({
             )}
 
             {firstname && (
-              <Nav.Link className="margin-user" href="#">
+              <div className="margin-user">
                 <div className="frame-8591">
                   <div className="user">
                     <div className="user-thumb" onClick={handeClick}>
@@ -84,7 +85,7 @@ export const NavBarDashboard = ({
                       >
                         <Dropdown.Item
                           className="settings-options"
-                          href="#/account"
+                          href={account}
                         >
                           <img src={UserIcon} alt="user icon" />
                           <span>Account</span>
@@ -105,7 +106,7 @@ export const NavBarDashboard = ({
                         </Dropdown.Item>
                         <Dropdown.Item
                           className="settings-options"
-                          href="#/logout"
+                          href="/logout"
                           onClick={handleLogout}
                         >
                           <img src={LogoutIcon} alt="logout icon" />
@@ -115,7 +116,7 @@ export const NavBarDashboard = ({
                     </Dropdown>
                   </div>
                 </div>
-              </Nav.Link>
+              </div>
             )}
           </Nav>
         </Navbar.Collapse>

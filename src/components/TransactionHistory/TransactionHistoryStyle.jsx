@@ -3,6 +3,11 @@ export const TransactionWrapper = styled.div `
 font-size:14px;
 `
 
+export const Container = styled.div `
+    max-height: 400px;
+    overflow: auto;
+`
+
 export const Transaction = styled.div `
 box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.1);
 padding: 15px;

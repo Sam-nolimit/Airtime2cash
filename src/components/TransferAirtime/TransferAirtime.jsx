@@ -4,71 +4,58 @@ import { Bg, Container, Form } from "../../styles/SellAirtime";
 import SelectInput from "../SelectInput";
 import InputField from "../InputField";
 import InputFieldReadOnly from "../InputFieldReadOnly";
+import InputCopy from "../InputCopy";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { mainAxios } from "../Axios/Axios";
 import Swal from "sweetalert2";
 
-// const networkList = [
-//   {
-//     id: "1",
-//     name: "MTN",
-//     ussd: "*777*NUMBER*amount*pin#",
-//     number: "07060000001",
-//   },
-//   {
-//     id: "2",
-//     name: "AIRTEL",
-//     ussd: "*432*NUMBER*AMOUNT#",
-//     number: "08026000001",
-//   },
-//   {
-//     id: "3",
-//     name: "GLO",
-//     ussd: "*131*NUMBER*amount* pin#",
-//     number: "08050000001",
-//   },
-//   {
-//     id: "4",
-//     name: "9mobile",
-//     ussd: "*223*PIN*Amount*NUMBER#",
-//     number: "08090000001",
-//   },
-// ];
-
 const SellAirtime = () => {
-  let initialValues = { phoneNumber: "", amount: "" };
+  let initialValues = { phoneNumber: "", amount: "", pin: "" };
   let initialNonEditableValues = { ussd: "USSD code", number: "070*********" };
   const [inputValues, setInputValues] = useState(initialValues);
   const [btnActive, setBtnActive] = useState(true);
   const [nonEditable, setNotEditable] = useState(initialNonEditableValues);
+  const [network, setNetwork] = useState([]);
 
-  const networkList = [
-    {
-      id: "1",
-      name: "MTN",
-      ussd: `*777*${inputValues.phoneNumber}*${inputValues.amount}*pin#`,
-      number: "07060000001",
-    },
-    {
-      id: "2",
-      name: "AIRTEL",
-      ussd: `*432*${inputValues.phoneNumber}*${inputValues.amount}#`,
-      number: "08026000001",
-    },
-    {
-      id: "3",
-      name: "GLO",
-      ussd: `*131*${inputValues.phoneNumber}*${inputValues.amount}* pin#`,
-      number: "08050000001",
-    },
-    {
-      id: "4",
-      name: "9mobile",
-      ussd: `*223*PIN*${inputValues.amount}*${inputValues.phoneNumber}#`,
-      number: "08090000001",
-    },
-  ];
+  useEffect(() => {
+    const networkList = [
+      {
+        id: "1",
+        name: "MTN",
+        ussd: `*777*07060000001*AMOUNT*PIN#`,
+        number: "07060000001",
+      },
+      {
+        id: "2",
+        name: "AIRTEL",
+        ussd: `*432*08026000001*AMOUNT#`,
+        number: "08026000001",
+      },
+      {
+        id: "3",
+        name: "GLO",
+        ussd: `*131*08050000001*AMOUNT*PIN#`,
+        number: "08050000001",
+      },
+      {
+        id: "4",
+        name: "9mobile",
+        ussd: `*223*PIN*AMOUNT*08090000001#`,
+        number: "08090000001",
+      },
+    ];
+    setNetwork(networkList);
+    networkList.forEach((el) => {
+      if (networkList.name === el.name) {
+        setNotEditable({
+          ussd: networkList.ussd.replace("p"),
+          number: el.number,
+        });
+      }
+    });
+    // console.log(inputValues.pin);
+  }, [inputValues]);
 
   const handleErrorMessage = (msg) => {
     return toast.error(msg);
@@ -76,15 +63,6 @@ const SellAirtime = () => {
 
   const handleSuccessMessage = (msg) => {
     return toast.success(msg);
-  };
-
-  const copyToClipboard = (e) => {
-    console.log(e.target.value);
-
-    e.target.select();
-    e.target.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(e.target.value);
-    alert(`Copied to Clipboard`);
   };
 
   const handleErrorValidation = () => {
@@ -121,17 +99,10 @@ const SellAirtime = () => {
     const { name, value } = e.target;
 
     setInputValues({ ...inputValues, [name]: value });
-    // console.log(inputValues.amount, inputValues.phoneNumber);
-    networkList.forEach((el) => {
-      if (e.value === el.name) {
-        setNotEditable({ ussd: el.ussd, number: el.number });
-        console.log(el.ussd, el.number);
-      }
-    });
   };
 
   const handleSelect = (e) => {
-    networkList.forEach((el) => {
+    network.forEach((el) => {
       if (e.value === el.name) {
         setNotEditable({ ussd: el.ussd, number: el.number });
       }
@@ -148,7 +119,7 @@ const SellAirtime = () => {
     try {
       if (validate) {
         const res = await mainAxios.post("transactions", inputValues);
-        setInputValues({ phoneNumber: "", amount: "" });
+        setInputValues({ phoneNumber: "", amount: "", pin: "" });
         setNotEditable({ ussd: "USSD code", number: "070*********" });
 
         Swal.fire(
@@ -188,7 +159,7 @@ const SellAirtime = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <SelectInput
-              selectionList={networkList}
+              selectionList={network}
               selectionDefault={"Select network"}
               onChangeAction={handleSelect}
               label={"Network"}
@@ -207,12 +178,22 @@ const SellAirtime = () => {
               changeHandle={handleChange}
               value={inputValues.amount || ""}
             />
-            <InputFieldReadOnly
+            <InputField
+              label={"PIN"}
+              placeholder={"PIN"}
+              name={"pin"}
+              changeHandle={handleChange}
+              value={inputValues.pin || ""}
+            />
+            <InputCopy
               label={"USSD"}
-              placeholder={"NGN"}
+              placeholder={"USSD"}
               name={"ussd"}
-              value={nonEditable.ussd}
-              clickHandle={copyToClipboard}
+              value={nonEditable.ussd.replace("AMOUNT", inputValues.amount)}
+              text={nonEditable.ussd.replace(
+                "AMOUNT*PIN",
+                `${inputValues.amount}*${inputValues.pin}`
+              )}
             />
             <InputFieldReadOnly
               label={"Amount to Receive"}
@@ -226,6 +207,7 @@ const SellAirtime = () => {
               name={"destinationPhoneNumber"}
               value={nonEditable.number}
             />
+
             <small style={{ color: "red", fontWeight: "bold" }}>
               **After transferring the airtime, click on the "Sent, notify
               Admin" button below

@@ -11,23 +11,46 @@ import './OverviewTable.css'
 
 
 
-const OverviewTable2 = ({ type }) => {
+const OverviewTable2 = ({ type }, key) => {
+
+    const pending = 0;
+    const success = 1;
+    const cancelled = 2;
+
+    let route = "";
+    if (type === "all") {
+        route = '/transactions?status=All-Transactions'
+    } else if (type === "pending") {
+        route = '/transactions?status=Pending-Transactions'
+    }
 
     const [transactions, setTransactions] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [toConfirm, setToConfirm] = useState({ id: null, amount: 0 });
 
-    const handleShow = () => {
+    const handleShow = async (e) => {
+        const id = e.currentTarget.getAttribute("data-edit-id");
+        const amount = e.currentTarget.getAttribute("data-edit-amount");
+
+        console.log({ myid: id })
+        setToConfirm({ id: id, amount: amount });
+
         setShowModal(true);
+    }
+
+    const handleCancel = async (e) => {
+        const id = e.currentTarget.getAttribute("data-cancel-id");
+        const res = await mainAxios.patch(`/transactions`, {
+            id: id,
+            status: cancelled
+        });
+
+        getTransactions()
     }
 
 
     const getTransactions = async () => {
-        let route = "";
-        if (type === "all") {
-            route = '/transactions?status=All-Transactions'
-        } else if (type === "pending") {
-            route = '/transactions?status=Pending-Transactions'
-        }
+
         const res = await mainAxios.get(route);
         console.log(res.data.transaction);
         setTransactions(res.data.transaction)
@@ -35,7 +58,7 @@ const OverviewTable2 = ({ type }) => {
 
     useEffect(() => {
         getTransactions();
-    }, [showModal])
+    }, [showModal, key])
 
     return (
         <Table responsive>
@@ -69,11 +92,15 @@ const OverviewTable2 = ({ type }) => {
                             <td>{data.network}</td>
                             {type === "all" && data.status == "0" &&
 
-                                <td>Pending</td>
+                                <td className='bg-warning'> Pending</td>
                             }
                             {type === "all" && data.status == "1" &&
 
-                                <td>Successful</td>
+                                <td className='bg-success text-white'>Successful</td>
+                            }
+                            {type === "all" && data.status == "2" &&
+
+                                <td className='bg-danger text-white'>Cancelled</td>
                             }
                             {type === "pending" &&
                                 <td>{data.action}
@@ -86,15 +113,15 @@ const OverviewTable2 = ({ type }) => {
                                             align={{ md: 'end' }}
 
                                         >
-                                            <Dropdown.Item onClick={handleShow} className="table-dropdown-item" >
+                                            <Dropdown.Item data-edit-id={data.userId} data-cancel-id={data.id} data-edit-amount={data.amount} onClick={handleShow} className="table-dropdown-item" >
                                                 <span >Edit</span>
                                             </Dropdown.Item>
-                                            <Dropdown.Item className="table-dropdown-item" href="#/">
+                                            <Dropdown.Item onClick={handleCancel} data-cancel-id={data.id} className="table-dropdown-item">
                                                 <span>Cancel</span>
                                             </Dropdown.Item>
                                         </DropdownButton>
                                     </Dropdown>
-                                    <ModalBS amountSent={Number((data.amount / 0.7).toFixed(2)).toLocaleString()} amountToReceive={data.amount.toLocaleString()} showModal={showModal} setShowModal={setShowModal} />
+                                    <ModalBS toConfirm={toConfirm} showModal={showModal} setShowModal={setShowModal} getTransactions={getTransactions} transactionId={data.id }/>
                                 </td>
                             }
 

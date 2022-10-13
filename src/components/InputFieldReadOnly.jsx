@@ -21,7 +21,7 @@ const InputField = ({
         value={value}
         onChange={changeHandle}
         onClick={clickHandle}
-        readOnly
+        disabled
       />
     </Input>
   );
