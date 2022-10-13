@@ -1,0 +1,408 @@
+import styled from 'styled-components'
+
+export const Nav = styled.div `
+    /* position: absolute;
+width: 100vw;
+height: 96px;
+left: 0px;
+top: 0px;
+background: #FFFFFF; */
+`
+export const PinkDiv = styled.div `
+    /* position: absolute;
+width: 100%;
+height: 271px;
+left: 0px;
+top: 96px;
+background: rgba(222, 61, 109, 0.1); */
+
+`
+
+
+export const NavLogo = styled.div `
+/* display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+position: absolute;
+width: 269px;
+height: 70px;
+left: 150px;
+top: 13px; */
+`
+
+export const Frame85 = styled.div `
+/* position: absolute;
+width: 91px;
+height: 36px;
+left: 1199px;
+top: 30px; */
+`
+
+export const Frame859  = styled.div`
+/* display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+position: absolute;
+width: 91px;
+height: 36px;
+left: 0px;
+top: 0px; */
+`
+export const Eclipse = styled.div`
+/* width: 36px;
+height: 36px;
+background: url(.jpg), rgba(0, 0, 0, 0.04);
+flex: none;
+order: 0;
+flex-grow: 0;
+background-color: green;
+border-radius: 50%; */
+`
+export const ProfName = styled.div`
+/* width: 47px;
+height: 19px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #012A4A;
+flex: none;
+order: 1;
+flex-grow: 0; */
+`
+
+export const Frame716 = styled.div`
+/* display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 32px;
+width: 553px;
+height: 204px;
+flex: none;
+order: 0;
+flex-grow: 0; */
+`
+
+export const WalDash = styled.div`
+/* display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 24px;
+gap: 4px;
+width: 551px;
+height: 151px;
+background: #DE3D6D;
+border-radius: 24px;
+flex: none;
+order: 0;
+flex-grow: 0; */
+`
+
+export const Frame8700 = styled.div`
+/* display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 4px;
+width: 183px;
+height: 106px;
+flex: none;
+order: 0;
+flex-grow: 0; */
+`
+
+export const Frame8698 = styled.div`
+/* display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 16px;
+width: 183px;
+height: 74px;
+flex: none;
+order: 0;
+flex-grow: 0; */
+`
+export const WalletB = styled.div`
+/* width: 110px;
+height: 19px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0; */
+`
+export const AccountB = styled.div`
+/* width: 183px;
+height: 39px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 39px;
+color: #FFFFFF;
+flex: none;
+order: 1;
+flex-grow: 0; */
+`
+
+export const Frame8697 = styled.div`
+/* display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+width: 99px;
+height: 28px;
+background: rgba(0, 0, 0, 0.05);
+opacity: 0.8;
+border: 1px solid rgba(0, 0, 0, 0.04);
+border-radius: 100px;
+order: 1;
+flex-grow: 0; */
+`
+
+export const ActiveAct = styled.div`
+/* font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+color: #FFFFFF;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 10px 8px 8px;
+gap: 10px;
+width: 150px;
+height: 28px;
+background: rgba(0, 0, 0, 0.05);
+opacity: 0.8;
+border: 1px solid rgba(0, 0, 0, 0.04);
+border-radius: 100px; */
+`
+
+export const Frame8715 = styled.div`
+/* display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 26px;
+width: 553px;
+height: 21px;
+flex: none;
+order: 1;
+flex-grow: 0; */
+`
+export const SellAirtime = styled.div`
+/* width: 74px;
+height: 17px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #012A4A;
+flex: none;
+order: 0;
+flex-grow: 0; */
+`
+export const Frame8714 = styled.div`
+/* display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+width: 127px;
+height: 21px;
+flex: none;
+order: 1;
+flex-grow: 0; */
+`
+export const WithdrawBal = styled.div`
+/* width: 120px;
+height: 17px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #012A4A;
+flex: none;
+order: 0;
+flex-grow: 0; */
+`
+export const Line = styled.div`
+/* width: 127px;
+height: 0px;
+border: 1px solid #DE3D6D;
+flex: none;
+order: 1;
+flex-grow: 0; */
+`
+export const ManageBal = styled.div`
+/* width: 147px;
+height: 17px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #012A4A;
+flex: none;
+order: 2;
+flex-grow: 0; */
+`
+export const TransactionHi = styled.div`
+/* width: 127px;
+height: 17px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #012A4A;
+flex: none;
+order: 3;
+flex-grow: 0; */
+`
+
+
+
+
+//Form 
+
+
+
+export const FormBox = styled.div `
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: absolute;
+width: 42.43rem;
+height: 931px;
+overflow-y: scroll;
+left: 381px;
+top: 176px;
+background: #FFFFFF;
+border: 1px solid #D9D9D9;
+
+`
+
+export const StyledForm = styled.div`
+padding: 10px;
+position: absolute;
+top: 200px;
+margin-left: 300;
+width: 559px;
+height: 389px;
+flex: none;
+order: 1;
+flex-grow: 0;
+`
+
+export const SelectStyle = styled.select`
+width: 100%;
+padding:3%;
+outline: none;
+border:1px solid #D9D9D9;
+margin-bottom: 40px;
+`
+export const InputStyle = styled.div`
+margin-left: -7.5rem;
+width: 551px;
+& .input{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border:1px solid #D9D9D9;
+    margin-bottom: 40px;
+}
+& .select.input{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border:1px solid #D9D9D9;
+    margin-left: 7.5rem;
+}
+
+`
+
+// export const ActName = styled.div`
+// font-family: 'Inter';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 14px;
+// line-height: 17px;
+// /* identical to box height */
+// color: #012A4A;
+// /* Inside auto layout */
+// `
+export const StyledButton = styled.button`
+/* display: flex; */
+/* text-align: center;
+padding: 8px 16px;
+border: none; 
+width: 80%; 
+background: linear-gradient(92.1deg, #DE3D6D 55.67%, #F5844C 101.51%);
+color: #fff; */
+/* Inside auto layout */ 
+`
+
+// export const SelectAct = styled.div`
+// width: 101px;
+// height: 17px;
+// font-family: 'Inter';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 14px;
+// line-height: 17px;
+// /* identical to box height */
+// color: #012A4A;
+// /* Inside auto layout */
+// flex: none;
+// order: 0;
+// flex-grow: 0;
+// `
+
+
+
+// export const Withdraw = styled.div`
+// position: absolute;
+// top: -30px;
+// font-family: 'Inter';
+// font-style: normal;
+// font-weight: 600;
+// font-size: 14px;
+// line-height: 17px;
+// color: #012A4A;
+// `
+
+// export const Frame8717 = styled.div`
+// display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// padding: 0px;
+// gap: 32px;
+// width: 559px;
+// height: 625px;
+// flex: none;
+// order: 0;
+// flex-grow: 0;`
+

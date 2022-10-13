@@ -1,0 +1,14 @@
+.logo{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+
+.logo img{
+    display: inline-block;
+}

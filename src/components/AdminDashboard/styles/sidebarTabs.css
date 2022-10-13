@@ -1,0 +1,56 @@
+.side-tab{
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: left;
+    display: flex;
+    color: #012A4A;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.side-tab-icon{
+    height: 1rem;
+}
+
+/* .dropdown-toggle:after { content: none } */
+
+.table-dropdown .dropdown-toggle::after{
+    visibility:hidden
+}
+
+.table-dropdown {
+    margin-top: 0 !important
+}
+.table-modal-title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.table-modal-footer{
+    justify-content: center;
+}
+.modal-header .btn-close {
+    padding: 0;
+    margin: 0;   
+}
+
+.nav-pills {
+    --bs-nav-pills-border-radius: 0.375rem;
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-link-padding-x: 2rem;
+    --bs-nav-link-padding-y: 1.2rem;
+    --bs-nav-pills-link-active-bg: #DE3D6D;
+}
+
+
+input:disabled {
+
+    background-color: #2e43532e
+   
+}
